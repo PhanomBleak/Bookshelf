@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>list</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+ 
+	<div>
+	  <h2>Books</h2>
+	    {% if book_list %}
+	    	<ul>
+	    	{% for book in book_list %}
+	    		<li>{{book.name}}</li>
+	    	{% endfor %}
+	    	</ul>
+	    {% else %}
+	    	<p> No Books </p>
+	    {% endif %}
+	</div>
+</body>

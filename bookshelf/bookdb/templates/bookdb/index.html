@@ -1,0 +1,23 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>home</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href = "/authors/"> list of authors</a> </li>
+			<li><a href = "/books/"> list of books </a></li>
+			<li><a href = "/addauthor/"> add an author </a></li>
+			<li><a href = "/addbook/"> add a book </a></li>
+		</ul>
+	</div>
+{% if messages %}
+<ul class="messages" style = "list-style-type: none;color: red" >
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }} " {% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<body>

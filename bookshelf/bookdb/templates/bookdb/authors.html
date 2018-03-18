@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>list</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+ 
+	<div>
+	  <h2>Authors</h2>
+	    {% if author_list %}
+	    	<ul>
+	    	{% for author in author_list %}
+	    		<li><a href="../details/{{author.name}}/">{{author.name}}</a></li>
+	    	{% endfor %}
+	    	</ul>
+	    {% else %}
+	    	<p> No Authors No Books </p>
+	    {% endif %}
+	</div>
+</body>
